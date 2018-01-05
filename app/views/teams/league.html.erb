@@ -1,0 +1,10 @@
+<h1>Leagues</h1>
+
+<div class="league">
+  <% @league.each do |team|%>
+    <div>Team: <%= team.city%> <%= team.nickname %> Wins:<%= team.wins %> Losses: <%=team.losses%></div>
+<% end %>
+
+<%= link_to "Eastern Conference", eastern_path %>
+<%= link_to "Western Conference", western_path %>
+</div>

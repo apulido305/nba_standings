@@ -1,0 +1,28 @@
+<h1>Western Conference</h1>
+
+<div class="table-responsive-vertical shadow-z-1">
+  <table class="table table-hover table-mc-light-blue">
+    <thead>
+        <tr>
+          <th>City</th>
+          <th>Team</th>
+          <th>Wins</th>
+          <th>Losses</th>
+          <th>Win %</th>
+        </tr>
+      </thead>
+      <tbody>
+  <% @western_conf.each do |team|%>
+      <tr>
+      <td><%= team.city %></td>
+      <td data-title="team"><%= link_to team.nickname,"http://nba.com/teams/#{team.nickname.downcase}" %></td>
+      <td><%= team.wins %></td>
+      <td><%=team.losses%></li></td>
+      <td><%=team.win_pct %>%</td>
+    </tr>
+<% end %>
+</tbody>
+</table>
+<%= link_to "Eastern Conference", eastern_path %>
+<%= link_to "League", league_path %>
+</div>

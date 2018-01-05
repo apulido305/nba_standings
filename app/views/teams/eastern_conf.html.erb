@@ -1,0 +1,9 @@
+<h1>Eastern Conference</h1>
+
+<div class="eastern">
+  <% @eastern_conf.each do |team|%>
+    <div>Team: <%= team.city%> <%= team.nickname %> Wins:<%= team.wins %> Losses: <%=team.losses%></div>
+<% end %>
+<%= link_to "League", league_path %>
+<%= link_to "Western Conference", western_path %>
+</div>
